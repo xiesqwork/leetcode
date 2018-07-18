@@ -1,0 +1,26 @@
+//被5除的才有0
+//分为被5,25,125除的
+//25两个0
+//被25除的已经被5除的统计过一次了
+public class Solution {
+    /*
+     * @param n: An integer
+     * @return: An integer, denote the number of trailing zeros in n!
+     */
+    public long trailingZeros(long n) {
+        // write your code here, try to do it without arithmetic operators.
+        long result=0;
+        long num=0;
+        
+        
+        long x=5;
+         while(true) {
+            num=n/x;
+            if(num==0)
+            break;
+            result+=num;
+            x=x*5;
+        }
+        return result;
+    }
+}
